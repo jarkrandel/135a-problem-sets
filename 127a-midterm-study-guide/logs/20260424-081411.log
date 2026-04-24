@@ -1,0 +1,36 @@
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext update` to produce a compatible file.
+INFO    : Building target web
+INFO    : XSL conversion of C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source\main.ptx by C:\Users\jarkr\.ptx\2.38.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\jarkr\.ptx\2.38.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : Generating any needed assets.
+INFO    : Finished generating assets.
+
+INFO    : Preparing to build into C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\output\web.
+INFO    : discovering source file's directory name: C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source
+INFO    : verifying and expanding input directory: C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source\../generated-assets
+INFO    : input directory expanded to absolute path: C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\generated-assets
+INFO    : verifying and expanding input directory: C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source\../assets
+INFO    : input directory expanded to absolute path: C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\assets
+INFO    : discovering source file's directory name: C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source
+INFO    : XSL conversion of C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source\main.ptx by C:\Users\jarkr\.ptx\2.38.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : successful application of C:\Users\jarkr\.ptx\2.38.0\core\xsl\utilities\report-publisher-variables.xsl
+INFO    : Downloading rs services file from https://runestone.academy/cdn/runestone/latest/webpack_static_imports.xml.
+INFO    : Runestone Services via online CDN query: version 7.13.5
+INFO    : Downloading Runestone Services, version 7.13.5
+INFO    : Extracting Runestone Services from archive file
+INFO    : Building custom css theme: theme-default-modern
+INFO    : converting C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source\main.ptx to HTML in C:\Users\jarkr\AppData\Local\Temp\ptx-7o3i9nfc
+INFO    : XSL conversion of C:\Users\jarkr\Teaching files\127A\127a-midterm-study-guide\source\main.ptx by C:\Users\jarkr\.ptx\2.38.0\core\xsl\pretext-html.xsl
+INFO    : messages from the log for XSL processing:
+INFO    : * PTX:INFO:   checking all deprecated elements.
+INFO    : successful application of C:\Users\jarkr\.ptx\2.38.0\core\xsl\pretext-html.xsl
+INFO    : Removing temporary directory C:\Users\jarkr\AppData\Local\Temp\ptx-7o3i9nfc
+INFO    : Removing temporary directory C:\Users\jarkr\AppData\Local\Temp\ptx-xwz979e8
+INFO    : 
+Finished build for target web. Run `pretext view web` to see the results.
+
+INFO    : 
+Success!  Built requested target(s) without errors.
+
+INFO    : 

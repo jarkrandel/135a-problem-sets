@@ -1,0 +1,13 @@
+WARNING : Project's CLI version could not be detected from `requirements.txt`.
+WARNING : Try `pretext update` to produce a compatible file.
+INFO    : Building target web
+INFO    : XSL conversion of C:\Users\jarkr\Teaching files\135B\127a-midterm-study-guide\source\main.ptx by C:\Users\jarkr\.ptx\2.38.0\core\xsl\utilities\pretext-enhanced-source.xsl
+INFO    : successful application of C:\Users\jarkr\.ptx\2.38.0\core\xsl\utilities\pretext-enhanced-source.xsl
+CRITICAL: It appears there is an error with your publication file.  Are you missing the required source/directories/@external and @generated attributes?
+CRITICAL: Failed to build without errors.  Exiting...
+INFO    : 
+----------------------------------------------------
+INFO    : While running pretext, the following errors occurred:
+
+INFO    : (see log messages above or in the 'logs' folder for more information)
+INFO    : ----------------------------------------------------

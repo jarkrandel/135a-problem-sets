@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<pretext xmlns:xi="http://www.w3.org/2001/XInclude" xml:lang="en-US">
+
+  <docinfo>
+    <rename element="exercise" xml:lang="en-US">Problem</rename>
+    <rename element="divisionalexercise" xml:lang="en-US">Problem</rename>
+    <rename element="exercises" xml:lang="en-US">Problems</rename>
+  </docinfo>
+
+  <article xml:id="midterm-study-guide-127a">
+    <title>MAT 127A SQ 2026 Midterm Study Guide</title>
+
+    <section xml:id="topics">
+      <title>Topics</title>
+
+      <p>The Midterm will cover all of the material discussed in lecture up until Friday, April 24. It will consist of 1 problem listing some conceptual True or False questions and 3 problems similar in style to homework/discussion problems. There will be 1 problem from each category of topics below:</p>
+
+      <ul>
+        <li>
+          <p><term>Suprema/Infima:</term> Know how to prove that the supremum of a given set is equal to some value. To do this, first, prove that the value is an upper bound. Then prove that it is less than or equal to any other upper bound (for infimum, replace upper with lower and less than with greater than). This can often be done directly (See Example 1.3.7), but sometimes proof by contradiction or a usage of Lemma 1.3.8 is helpful in proving the "least" part.</p>
+        </li>
+        <li>
+          <p><term>Convergence of sequences by definition:</term> Know how to prove that a sequence converges to a given value using the <m>\epsilon</m>-<m>N</m> definition directly for either an explicitly defined sequence (like in Problem Set 2 problem 1) or for a sequence defined in terms of other sequences as in the proof of the Algebraic Limit Theorem. Know how to show a sequence diverges via the definition or divergence criterion.</p>
+        </li>
+        <li>
+          <p><term>Subsequences / Convergence Criteria / Basics of Series:</term> Know the statements of the Monotone Convergence Theorem, Bolzano-Weierstrass, and the Cauchy Criterion. Know how to apply the MCT and BW and work with monotone / Cauchy sequences and subsequences. Know the definition of series, how to determine convergence/divergence using the definition for basic examples, and know the basic properties of series.</p>
+        </li>
+      </ul>
+    </section>
+
+    <exercises xml:id="practice-midterm">
+      <title>Practice midterm</title>
+
+      <introduction>
+        <p>Here's a couple of practice problems to give you an idea of what to expect.</p>
+      </introduction>
+
+      <exercise xml:id="practice-problem-1">
+        <statement>
+          <p>Consider the sequence <m>(a_n)</m> given by</p>
+          <me>a_n = \frac{2n^2+1}{n^2+3}.</me>
+          <p>Prove that <m>(a_n)</m> converges to <m>2</m> directly using the <m>\epsilon</m>-<m>N</m> definition of the limit.</p>
+        </statement>
+        <solution>
+          <p>Notice that</p>
+          <me>
+\begin{aligned}
+|a_n - 2| &amp;= \left|\frac{2n^2+1}{n^2+3} - 2\right| = \left|\frac{2n^2+1-2(n^2+3)}{n^2+3}\right|\\
+&amp;= \left|\frac{-5}{n^2+3}\right| = \frac{5}{n^2+3} &lt; \frac{5}{n^2}.
+\end{aligned}
+          </me>
+          <p>Therefore, for any <m>\epsilon &gt; 0</m>, if we know that <m>n</m> is large enough so that <m>\frac{5}{n^2} &lt; \epsilon</m>, then we will have <m>|a_n-2| &lt; \epsilon</m>. By rearranging to solve for <m>n</m>, <m>\frac{5}{n^2} &lt; \epsilon</m> if and only if <m>\sqrt{5/\epsilon} &lt; n</m>. So, we should choose <m>N &gt; \sqrt{5/\epsilon}</m> in our proof.</p>
+
+          <p><term>Proof:</term> Let <m>\epsilon &gt; 0</m>. Let <m>N \in \mathbb{N}</m> satisfy <m>N &gt; \sqrt{5/\epsilon}</m> (such an integer exists by the Archimedean Property). Then for any <m>n \geq N</m>, the above work shows that</p>
+          <me>
+\begin{aligned}
+|a_n-2| &lt; \frac{5}{n^2} \leq \frac{5}{N^2} &lt; \epsilon.
+\end{aligned}
+          </me>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="practice-problem-2">
+        <statement>
+          <p>Let <m>A,B \subseteq (0,\infty)</m> be nonempty and bounded above. Define</p>
+          <me>AB = \{ab : a \in A,\ b \in B\}.</me>
+          <p>Prove that <m>\sup(AB) = \sup A \cdot \sup B</m>. You may assume that <m>\sup A &gt; 0</m> and <m>\sup B &gt; 0</m>.</p>
+        </statement>
+        <solution>
+          <p>Let <m>s = \sup A</m> and <m>t = \sup B</m> to simplify notation. We need to show that <m>st</m> is the least upper bound for <m>AB</m>. First, we show it is an upper bound. For any <m>a \in A</m> and <m>b \in B</m>, we know that <m>a \leq s</m> and <m>b \leq t</m> since <m>s</m> is an upper bound for <m>A</m> and <m>t</m> is an upper bound for <m>B</m>. Therefore, for any <m>a \in A</m> and <m>b \in B</m>,</p>
+          <me>ab \leq sb \leq st.</me>
+          <p>This shows that <m>st</m> is an upper bound. Now, we show it is the <term>least</term> upper bound. We can do this directly. Let <m>u</m> be an upper bound for <m>AB</m>. Then for any <m>a \in A</m> and <m>b \in B</m></p>
+          <me>ab \leq u.</me>
+          <p>This gives</p>
+          <me>a \leq \frac{u}{b}</me>
+          <p>for any fixed <m>b \in B</m> and for all <m>a \in A</m>. This shows that <m>u/b</m> is an upper bound for <m>A</m>, hence <m>s \leq u/b</m> since <m>s</m> is the least upper bound. Rearranging this, we get</p>
+          <me>b \leq \frac{u}{s}.</me>
+          <p>for any <m>b \in B</m>, meaning that <m>u/s</m> is an upper bound for <m>B</m>. Since <m>t</m> is the least upper bound for <m>B</m>, we get <m>t \leq u/s</m>, hence <m>st \leq u</m>. This shows <m>st</m> is the least upper bound for <m>AB</m>.</p>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="practice-problem-3">
+        <statement>
+          <p>Determine whether the following statements are True or False.</p>
+          <ol marker="a">
+            <li><p>There exists a Cauchy sequence with an unbounded subsequence.</p></li>
+            <li><p>If <m>(x_n)</m> and <m>(y_n)</m> are convergent sequences such that <m>x_n \to x</m>, <m>y_n \to y</m>, and <m>x_n &lt; y_n</m> for all <m>n \in \mathbb{N}</m>, then <m>x &lt; y</m>.</p></li>
+            <li><p>The set of all rational numbers <m>p/q</m> with <m>q=2^n</m> for some <m>n \in \mathbb{N}</m> is dense in <m>\mathbb{R}</m>.</p></li>
+            <li><p>If <m>(a_n)</m> has a subsequence that does not converge, then <m>(a_n)</m> does not converge.</p></li>
+            <li><p>The series <m>-1 + \frac{1}{1^2} - \frac{1}{2} + \frac{1}{2^2} - \frac{1}{3} + \frac{1}{3^2} - \ldots</m> converges.</p></li>
+          </ol>
+        </statement>
+        <solution>
+          <ol marker="a">
+            <li>
+              <p><term>False.</term> Every Cauchy sequence converges by the Cauchy Criterion, and hence is bounded. Every subsequence of a bounded sequence is bounded.</p>
+            </li>
+            <li>
+              <p><term>False.</term> The statement is true by the Order Limit Theorem if <m>x &lt; y</m> is replaced with <m>x \leq y</m>, but for this statement we can use <m>x_n = 0</m> and <m>y_n = \frac{1}{n}</m> as a counterexample since <m>x = y = 0</m>.</p>
+            </li>
+            <li>
+              <p><term>True.</term> We have no restriction on the numerators, and the denominators get arbitrarily large. This is enough for density by the proof of density.</p>
+            </li>
+            <li>
+              <p><term>True.</term> The contrapositive of this statement is: If <m>(a_n)</m> converges, then every subsequence converges. We proved that every subsequence of a convergent sequence converges to the same limit, so this is true.</p>
+            </li>
+            <li>
+              <p><term>False.</term> The series consisting of odd terms is <m>\sum(-1/n)</m>, while the even terms is <m>\sum 1/n^2</m>. The sum of even terms converges while the sum of odd terms diverges to <m>-\infty</m>, implying the whole series diverges to <m>-\infty</m>.</p>
+            </li>
+          </ol>
+        </solution>
+      </exercise>
+
+      <exercise xml:id="practice-problem-4">
+        <statement>
+          <p>Let <m>(x_n)</m> be an increasing sequence such that <m>x_n \geq 0</m> for all <m>n \in \mathbb{N}</m> and there exists a subsequence <m>(x_{n_k})</m> of <m>(x_n)</m> that is bounded.</p>
+          <ol marker="a">
+            <li><p>Prove that <m>(x_n)</m> is bounded.</p></li>
+            <li><p>Use the result of part (a) to prove that <m>(x_n)</m> converges.</p></li>
+            <li><p>Let <m>x \in \mathbb{R}</m> be such that <m>x_n \to x</m>. Prove that <m>x_n \leq x</m> for all <m>n \in \mathbb{N}</m>. Hint: proof by contradiction is one way of doing this.</p></li>
+          </ol>
+        </statement>
+        <solution>
+          <ol marker="a">
+            <li>
+              <p>Since <m>(x_{n_k})</m> is bounded, there exists <m>M &gt; 0</m> such that <m>|x_{n_k}| \leq M</m> for all <m>k \geq 1</m>. Since <m>x_n \geq 0</m> for all <m>n</m>, we know that <m>|x_n| = x_n</m> for all <m>n</m>. Given any fixed <m>n</m>, we can find <m>n_k &gt; n</m> so that</p>
+              <me>|x_n| = x_n \leq x_{n_k} = |x_{n_k}| \leq M</me>
+              <p>using the fact that <m>(x_n)</m> is increasing.</p>
+            </li>
+            <li>
+              <p>Since <m>(x_n)</m> is increasing and bounded, it converges by the Monotone Convergence Theorem.</p>
+            </li>
+            <li>
+              <p>Towards a proof by contradiction, suppose that <m>x_m &gt; x</m> for some <m>m \in \mathbb{N}</m>. Then <m>\epsilon = x_m - x &gt; 0</m>, and the fact that <m>(x_n) \to x</m> means that there exists <m>N \in \mathbb{N}</m> such that <m>|x_n-x| &lt; \epsilon</m> for all <m>n \geq N</m>. On the other hand, the fact that <m>(x_n)</m> is increasing means that <m>x_n \geq x_m &gt; x</m> for all <m>n \geq m</m>, meaning <m>|x_n - x| &gt; |x_m-x| = \epsilon</m> for all <m>n \geq m</m>. So, for any <m>n \geq \max\{N,m\}</m>, we get</p>
+              <me>\epsilon &lt; |x_n-x| &lt; \epsilon,</me>
+              <p>a contradiction.</p>
+            </li>
+          </ol>
+        </solution>
+      </exercise>
+    </exercises>
+  </article>
+</pretext>
